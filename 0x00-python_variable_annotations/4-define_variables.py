@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
+'''Task 4's module.
+'''
 
-a = 1 # a is an integer with a value of 1
-pi = 3.14 # pi is a float with a value of 3.14
-i_understand_annotations = True # i_understand_annotations is a boolean with a value of True
-school = "Holberton" # school is a string with a value of "Holberton"
+
+a: int = 1
+pi: float = 3.14
+i_understand_annotations: bool = True
+school: str = 'Holberton'
