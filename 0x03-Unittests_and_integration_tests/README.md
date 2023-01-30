@@ -2,6 +2,9 @@
 
 This project contains tasks for learning to write unittests and integration tests in Python 3.
 
+![Pep8 style](https://img.shields.io/badge/PEP8-style%20guide-purple?style=round-square)
+![Latest commit](https://img.shields.io/github/last-commit/oluwasube/alx-backend-python/main?style=round-square)
+
 ## Required Modules
 
 + parameterized.
