@@ -87,9 +87,27 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         self.assertEqual(test_git.public_repos(),
                          self.expected_repos)
 
-    @classmethod
-    def tearDownClass(cls) -> None:
+ @classmethod
+    def tearDownClass(cls):
+        """
+        Tear down resources set up for class tests.
+        Stops the patcher that had been started
+        """
         cls.get_patcher.stop()
+
+    def test_public_repos(self):
+        """
+        Test public_repos method without license
+        """
+        self.assertEqual(self.client.public_repos(), self.expected_repos)
+
+    def test_public_repos_with_license(self):
+        """
+        Test public_repos method with license
+        """
+        self.assertEqual(
+            self.client.public_repos(license="apache-2.0"),
+            self.apache2_repos)
 
 
 if __name__ == "__main__":
